@@ -1,0 +1,89 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&family=Mukta:wght@400;600;700&display=swap');
+  * { box-sizing: border-box; }
+  html { color-scheme: dark; }
+  body {
+    margin: 0; text-align: center;
+    font-family: 'Mukta', system-ui, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #4a2408 0%, #1c0f06 55%, #0d0704 100%) fixed, #0d0704;
+    color: #f5e7c8; min-height: 100vh; padding: 18px 12px 60px;
+  }
+  .page { max-width: 660px; margin: 0 auto; }
+  .heroWrap {
+    border: 3px double #d4a017; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 0 40px rgba(212,160,23,.25), 0 10px 40px rgba(0,0,0,.6);
+    background: #000;
+  }
+  .heroWrap img { width: 100%; height: 300px; object-fit: cover; display: block; }
+  @media (max-width: 520px) { .heroWrap img { height: 210px; } }
+  .card {
+    margin-top: 14px; background: linear-gradient(180deg, #221106 0%, #160b04 100%);
+    border: 3px double #d4a017; border-radius: 18px; padding: 22px 20px;
+    box-shadow: 0 0 40px rgba(212,160,23,.18), 0 10px 40px rgba(0,0,0,.6);
+    white-space: normal;
+  }
+  .kicker { letter-spacing: 4px; font-weight: 700; color: #ffd76a; font-size: 22px; }
+  .sub { letter-spacing: 3px; color: #e8b64c; font-size: 13px; margin-top: 2px; }
+  .verseTag { margin: 12px 0 2px; color: #ffe9a8; font-weight: 700; font-size: 17px; }
+  .chName { color: #c99b3f; font-style: italic; font-size: 14px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px 0 4px; }
+  .controls button, .controls select {
+    background: #2b1607; color: #ffe9a8; border: 1px solid #d4a017; border-radius: 10px;
+    padding: 8px 12px; font-size: 14px; font-family: inherit; cursor: pointer;
+  }
+  .controls button:hover { background: #3d2009; }
+  .controls button:disabled { opacity: .5; cursor: default; }
+  select { max-width: 150px; }
+  .sec { border-top: 1px dashed #8a6a25; margin-top: 16px; padding-top: 14px; text-align: center; }
+  .secHead { font-weight: 700; letter-spacing: 2px; color: #ffd76a; font-size: 15px; margin-bottom: 4px; }
+  .secRule { color: #8a6a25; letter-spacing: 2px; font-size: 11px; margin-bottom: 10px; }
+  .slok {
+    font-family: 'Tiro Devanagari Sanskrit', 'Mukta', serif;
+    font-size: 21px; line-height: 1.9; color: #fff3d6; white-space: pre-line;
+  }
+  .translit { color: #b9a06a; font-style: italic; font-size: 13px; margin-top: 8px; white-space: pre-line; }
+  .meaning { font-size: 16.5px; line-height: 1.75; color: #f5e7c8; }
+  .meaning.hi { font-size: 18px; }
+  .aiBox { font-size: 16px; line-height: 1.7; color: #f5e7c8; }
+  .reflect { font-size: 17px; font-style: italic; color: #ffe9a8; line-height: 1.7; }
+  .loading { color: #c99b3f; animation: pulse 1.2s infinite; }
+  @keyframes pulse { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+  .rowBtns { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+  .rowBtns button {
+    background: linear-gradient(180deg, #6b3a0d, #3d2009); color: #ffe9a8;
+    border: 1px solid #d4a017; border-radius: 12px; padding: 10px 16px;
+    font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit;
+  }
+  .rowBtns button:hover { filter: brightness(1.2); }
+  .footer { margin-top: 16px; border-top: 1px dashed #8a6a25; padding-top: 14px; color: #ffd76a; font-weight: 700; }
+  .footer small { display: block; color: #c99b3f; font-weight: 400; margin-top: 4px; }
+  .prog { font-size: 12.5px; color: #b9a06a; margin-top: 10px; }
+  #toast {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+    background: #2b1607; border: 1px solid #d4a017; color: #ffe9a8;
+    padding: 10px 18px; border-radius: 12px; display: none; z-index: 50;
+  }
+  .quoteStrip {
+    margin-top: 14px; background: linear-gradient(180deg, #2e1c07, #1c1005);
+    border: 2px solid #d4a017; border-radius: 14px; padding: 12px 16px; cursor: pointer;
+    box-shadow: 0 0 24px rgba(212,160,23,.15);
+  }
+  .quoteStrip:active { transform: scale(.99); }
+  .quoteHead { font-size: 12px; letter-spacing: 2px; color: #e8b64c; font-weight: 700; }
+  .quoteText { font-size: 16.5px; font-style: italic; color: #fff3d6; margin-top: 6px; line-height: 1.6; }
+  .quoteRef { font-size: 12.5px; color: #c99b3f; margin-top: 4px; }
+  .chSub { font-size: 12px; color: #8a6a25; font-style: italic; margin-top: 2px; }
+  .bySrila { font-weight: 400; font-size: 13px; color: #c99b3f; letter-spacing: 0; }
+  .sharedNote { font-size: 12.5px; color: #b9a06a; font-style: italic; margin-top: 6px; }
+  .synonyms { font-size: 15px; line-height: 1.8; color: #e8d9b0; text-align: left; }
+  .purport { font-size: 15.5px; line-height: 1.8; color: #f0e2bd; text-align: left; white-space: pre-line; }
+  .purport.clamped { display: -webkit-box; -webkit-line-clamp: 8; -webkit-box-orient: vertical; overflow: hidden; white-space: normal; }
+  details.fold { border: 1px dashed #8a6a25; border-radius: 10px; padding: 10px 12px; }
+  details.fold summary { cursor: pointer; font-weight: 700; letter-spacing: 1px; color: #ffd76a; font-size: 14px; list-style: none; }
+  details.fold summary::-webkit-details-marker { display: none; }
+  .foldHint { font-weight: 400; font-size: 12px; color: #b9a06a; }
+  .linkBtn {
+    margin-top: 10px; background: none; border: 1px solid #d4a017; border-radius: 10px;
+    color: #ffd76a; padding: 7px 14px; font-size: 14px; cursor: pointer; font-family: inherit;
+  }
+  .vbLink { display: inline-block; margin-top: 10px; font-size: 13.5px; color: #e8b64c; }

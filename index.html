@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhagavad Gita Daily Wisdom</title>
+<meta name="description" content="Bhagavad Gita daily wisdom — Sanskrit shloka, Hindi + English, Prabhupada translation, word meanings and full purport from Vedabase, with daily inspiration.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+  <div class="heroWrap">
+    <img src="assets/hero.jpg" alt="Lord Krishna and Arjuna on a golden chariot at Kurukshetra">
+  </div>
+
+  <div class="quoteStrip" id="quoteBox" title="Tap to open this verse">
+    <div class="quoteHead" id="quoteCat">✨ TODAY'S INSPIRATION 💪 MOTIVATION</div>
+    <div class="quoteText" id="quoteText">…</div>
+    <div class="quoteRef" id="quoteRef"></div>
+  </div>
+
+  <div class="card">
+    <div class="kicker">🦚 BHAGAVAD GITA 🦚</div>
+    <div class="sub">DAILY WISDOM SERIES</div>
+    <div class="verseTag" id="verseTagEl">✨ Chapter 1 • Verse 1 ✨</div>
+    <div class="chName" id="chNameEl">(Arjuna Vishada Yoga)</div>
+    <div class="chSub" id="chSubEl"></div>
+
+    <div class="controls">
+      <button id="prevBtn">◀ Prev</button>
+      <button id="todayBtn">📿 Today</button>
+      <button id="randBtn">🎲 Random</button>
+      <button id="nextBtn">Next ▶</button>
+    </div>
+    <div class="controls">
+      <select id="chSel" aria-label="Chapter"></select>
+      <select id="vSel" aria-label="Verse"></select>
+      <button id="speakBtn" title="Listen">🔊 Listen</button>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">🔆 SANSKRIT SHLOKA</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="slok" id="slokEl">…</div>
+      <div class="translit" id="transEl"></div>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">🇮🇳 HINDI MEANING</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="meaning hi" id="hiEl">…</div>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">🇬🇧 ENGLISH MEANING</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="meaning" id="enEl">…</div>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">📖 PRABHUPADA TRANSLATION</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="meaning" id="traEl"><span class="loading">✨ loading from Vedabase…</span></div>
+      <div class="sharedNote" id="sharedEl" hidden></div>
+    </div>
+
+    <div class="sec">
+      <details class="fold" id="synFold">
+        <summary>🔍 WORD-BY-WORD MEANINGS <span class="foldHint">(tap to expand)</span></summary>
+        <div class="synonyms" id="synEl">…</div>
+      </details>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">📜 PURPORT <span class="bySrila">— Srila Prabhupada</span></div>
+      <div class="secRule">─────────────────────</div>
+      <div class="purport" id="purEl"><span class="loading">✨ loading purport from Vedabase…</span></div>
+      <button class="linkBtn" id="purMoreBtn" hidden>📖 Read full purport</button>
+      <div><a class="vbLink" id="vbLink" href="#" target="_blank" rel="noopener">📚 Read on Vedabase.io →</a></div>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">💡 SIMPLE EXAMPLE</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="aiBox" id="exEl"><span class="loading">✨ thinking of a simple example…</span></div>
+    </div>
+
+    <div class="sec">
+      <div class="secHead">🤔 REFLECTION FOR TODAY</div>
+      <div class="secRule">─────────────────────</div>
+      <div class="reflect" id="refEl"><span class="loading">✨ preparing your reflection…</span></div>
+    </div>
+
+    <div class="rowBtns">
+      <button id="copyBtn">📋 Copy card</button>
+      <button id="shareBtn">📤 Share</button>
+    </div>
+
+    <div class="footer">
+      🙏 Hare Krishna! See you tomorrow 🙏
+      <small id="tomorrowEl">with Verse 1.2</small>
+    </div>
+    <div class="prog" id="progEl"></div>
+  </div>
+</div>
+<div id="toast"></div>
+<script src="js/data-verses.js"></script>
+<script src="js/data-purports.js"></script>
+<script src="js/data-bank.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
